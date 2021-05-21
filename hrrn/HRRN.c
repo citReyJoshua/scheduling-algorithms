@@ -10,9 +10,6 @@ void getValues(SortedList q) {
   printf("\nInput number of processes: ");
   scanf("%d", &size);
 
-  int arriv[] = {0, 2, 4, 6, 8};
-  int burst[] = {3, 6, 4, 5, 2};
-
   for (int i = 0; i < size; i++) {
     int burstTime, arrivalTime;
 
@@ -26,8 +23,8 @@ void getValues(SortedList q) {
     listItem item;
 
     item.id = i + 1;
-    item.bt = burst[i];
-    item.at = arriv[i];
+    item.bt = burstTime;
+    item.at = arrivalTime;
     item.complete = 0;  // temporary
     add(q, item);
   }
